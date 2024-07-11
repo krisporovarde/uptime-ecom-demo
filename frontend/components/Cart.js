@@ -22,6 +22,9 @@ const CartItemStyles = styled.li`
   p {
     margin: 0;
   }
+  footer {
+    display: inline-block;
+  }
 `;
 
 function CartItem({ cartItem }) {
