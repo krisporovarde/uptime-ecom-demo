@@ -9,7 +9,7 @@ export const Product = list({
 		description: text({
 			ui: {
 				displayMode: 'textarea',
-			},
+      },
 		}),
 		status: select({
 			options: [
