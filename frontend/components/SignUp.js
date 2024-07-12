@@ -5,7 +5,7 @@ import DisplayError from './ErrorMessage';
 import useForm from '../lib/useForm';
 import { CURRENT_USER_QUERY } from './User';
 
-const SIGNUP_MUTATION = gql`
+export const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(
     $email: String!
     $name: String!

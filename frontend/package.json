@@ -1,5 +1,5 @@
 {
-	"name": "sick-fits-frontend",
+	"name": "ecom-demo-frontend",
 	"version": "1.0.0",
 	"description": "E-com demo application built with React, GraphQL, Next and Apollo",
 	"main": "index.js",
