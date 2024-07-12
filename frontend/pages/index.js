@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-restricted-exports
-// export { default } from './products';
-import React from 'react';
+export { default } from './products';
 
-export default function index() {
-  return <div>index</div>;
-}
+// export default function index() {
+//   return <div>index</div>;
+// }

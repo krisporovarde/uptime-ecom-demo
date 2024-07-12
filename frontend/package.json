@@ -7,7 +7,7 @@
 		"dev": "next -p 7777",
 		"build": "next build --debug",
 		"start": "next start -p 7777",
-		"test": "NODE_ENV=test jest --watch",
+		"test": "cross-env NODE_ENV=test jest --watch",
 		"heroku-postbuild": "next build",
 		"xxpreinstall": "npx npm-force-resolutions"
 	},
@@ -64,6 +64,7 @@
 		"babel-eslint": "^10.1.0",
 		"babel-jest": "^27.4.2",
 		"casual": "^1.6.2",
+		"cross-env": "^7.0.3",
 		"eslint": "^8.4.1",
 		"eslint-config-airbnb": "^19.0.2",
 		"eslint-config-prettier": "^8.3.0",
@@ -81,6 +82,60 @@
 	"jest": {
 		"setupFilesAfterEnv": [
 			"./jest.setup.js"
-		]
-	}
+		],
+		"testEnvironment": "jsdom"
+	},
+	"babel": {
+		"env": {
+		  "development": {
+			"presets": [
+			  "next/babel"
+			],
+			"plugins": [
+			  [
+				"styled-components",
+				{
+				  "ssr": true,
+				  "displayName": true
+				}
+			  ]
+			]
+		  },
+		  "production": {
+			"presets": [
+			  "next/babel"
+			],
+			"plugins": [
+			  [
+				"styled-components",
+				{
+				  "ssr": true,
+				  "displayName": true
+				}
+			  ]
+			]
+		  },
+		  "test": {
+			"presets": [
+			  [
+				"next/babel",
+				{
+				  "preset-env": {
+					"modules": "commonjs"
+				  }
+				}
+			  ]
+			],
+			"plugins": [
+			  [
+				"styled-components",
+				{
+				  "ssr": true,
+				  "displayName": true
+				}
+			  ]
+			]
+		  }
+		}
+	  }
 }
