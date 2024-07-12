@@ -10,7 +10,8 @@
 	},
 	"eslintConfig": {
 		"extends": [
-			"wesbos"
+			"wesbos",
+			"prettier"
 		],
 		"rules": {
 			"react/jsx-props-no-spreading": 0,
